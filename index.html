@@ -1,79 +1,300 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Almashines Alumni Portal - Newsletter Archive</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            color: #374151;
+        }
+        
+        /* shadcn styling */
+        .shadcn-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .shadcn-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+        
+        .shadcn-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+        
+        .shadcn-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            height: 2.5rem;
+            padding: 0 1rem;
+        }
+        
+        .shadcn-button-primary {
+            background-color: #2563eb;
+            color: white;
+        }
+        
+        .shadcn-button-primary:hover {
+            background-color: #1d4ed8;
+        }
+        
+        .shadcn-button-outline {
+            background-color: transparent;
+            border: 1px solid #e5e7eb;
+            color: #374151;
+        }
+        
+        .shadcn-button-outline:hover {
+            background-color: #f9fafb;
+            border-color: #d1d5db;
+        }
+        
+        .shadcn-select {
+            border-radius: 0.375rem;
+            border: 1px solid #e5e7eb;
+            padding: 0.5rem 2.5rem 0.5rem 0.75rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            background-color: white;
+            color: #374151;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 9999px;
+            font-weight: 500;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            padding: 0.125rem 0.625rem;
+        }
+        
+        .badge-blue {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .badge-purple {
+            background-color: #ede9fe;
+            color: #5b21b6;
+        }
+        
+        .badge-green {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+        
+        /* Navigation */
+        .nav-link {
+            color: #6b7280;
+            font-weight: 500;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.375rem;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #111827;
+            background-color: #f3f4f6;
+        }
+        
+        .nav-link.active {
+            color: #2563eb;
+            background-color: #eff6ff;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <h1>Almashines Alumni Portal</h1>
+    <div class="shadcn-container">
+        <!-- Header -->
+        <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 pb-6 border-b border-gray-200">
+            <div class="mb-4 sm:mb-0">
+                <h1 class="text-2xl font-bold text-gray-900">Almashines Alumni Portal</h1>
+                <p class="text-sm text-gray-500 mt-1">Keeping our community connected</p>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#" class="active">Newsletter Archive</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+            <nav class="flex space-x-1">
+                <a href="#" class="nav-link active">Archive</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
             </nav>
         </header>
 
         <main>
-            <section class="intro">
-                <h2>Newsletter Archive</h2>
-                <p>Welcome to the Almashines Alumni Portal newsletter archive. Here you'll find all our past newsletters, featuring alumni spotlights, upcoming events, and the latest news from our community.</p>
+            <!-- Hero section -->
+            <section class="mb-12">
+                <div class="shadcn-card p-8 bg-gradient-to-r from-blue-50 to-indigo-50">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Newsletter Archive</h2>
+                    <p class="text-gray-600 max-w-2xl">
+                        Welcome to the Almashines Alumni Portal newsletter archive. Here you'll find all our past newsletters, featuring alumni spotlights, upcoming events, and the latest news from our community.
+                    </p>
+                </div>
             </section>
 
-            <section class="archive-list">
-                <div class="filter">
-                    <label for="year">Filter by year:</label>
-                    <select id="year">
-                        <option value="all">All Years</option>
-                        <option value="2025">2025</option>
-                        <option value="2024">2024</option>
-                    </select>
+            <!-- Filter & List section -->
+            <section>
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+                    <h3 class="text-lg font-medium text-gray-900">All Newsletters</h3>
+                    
+                    <div class="flex items-center space-x-3">
+                        <label for="year" class="text-sm font-medium text-gray-700">Filter by:</label>
+                        <select id="year" class="shadcn-select">
+                            <option value="all">All Years</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="newsletters">
-                    <div class="newsletter-item">
-                        <div class="date">April 2025</div>
-                        <h3><a href="newsletters/newsletter-2025-04.html">Alumni Achievements Special Edition</a></h3>
-                        <p>Featuring success stories from our recent graduates and exciting new partnerships.</p>
+                <!-- Newsletter items -->
+                <div class="space-y-4 mb-12">
+                    <!-- Newsletter item 1 -->
+                    <div class="shadcn-card p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-start">
+                            <div class="sm:w-32 flex-shrink-0 mb-4 sm:mb-0">
+                                <div class="text-sm font-medium text-gray-500">April 2025</div>
+                                <div class="mt-1">
+                                    <span class="badge badge-blue">Latest</span>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                                    <a href="newsletters/newsletter-2025-04.html" class="hover:text-blue-600">Alumni Achievements Special Edition</a>
+                                </h3>
+                                <p class="text-gray-600 mb-4">Featuring success stories from our recent graduates and exciting new partnerships.</p>
+                                <div class="flex items-center">
+                                    <a href="newsletters/newsletter-2025-04.html" class="shadcn-button shadcn-button-primary">Read Newsletter</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="newsletter-item">
-                        <div class="date">March 2025</div>
-                        <h3><a href="newsletters/newsletter-2025-03.html">Spring Conference Recap</a></h3>
-                        <p>Highlights from our annual Spring Conference and upcoming networking opportunities.</p>
+                    <!-- Newsletter item 2 -->
+                    <div class="shadcn-card p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-start">
+                            <div class="sm:w-32 flex-shrink-0 mb-4 sm:mb-0">
+                                <div class="text-sm font-medium text-gray-500">March 2025</div>
+                                <div class="mt-1">
+                                    <span class="badge badge-purple">Events</span>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                                    <a href="newsletters/newsletter-2025-03.html" class="hover:text-blue-600">Spring Conference Recap</a>
+                                </h3>
+                                <p class="text-gray-600 mb-4">Highlights from our annual Spring Conference and upcoming networking opportunities.</p>
+                                <div class="flex items-center">
+                                    <a href="newsletters/newsletter-2025-03.html" class="shadcn-button shadcn-button-primary">Read Newsletter</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="newsletter-item">
-                        <div class="date">February 2025</div>
-                        <h3><a href="newsletters/newsletter-2025-02.html">Industry Insights</a></h3>
-                        <p>Expert analysis on emerging tech trends and career development resources.</p>
+                    <!-- Newsletter item 3 -->
+                    <div class="shadcn-card p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-start">
+                            <div class="sm:w-32 flex-shrink-0 mb-4 sm:mb-0">
+                                <div class="text-sm font-medium text-gray-500">February 2025</div>
+                                <div class="mt-1">
+                                    <span class="badge badge-green">Insights</span>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                                    <a href="newsletters/newsletter-2025-02.html" class="hover:text-blue-600">Industry Insights</a>
+                                </h3>
+                                <p class="text-gray-600 mb-4">Expert analysis on emerging tech trends and career development resources.</p>
+                                <div class="flex items-center">
+                                    <a href="newsletters/newsletter-2025-02.html" class="shadcn-button shadcn-button-primary">Read Newsletter</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="newsletter-item">
-                        <div class="date">January 2025</div>
-                        <h3><a href="#">New Year, New Opportunities</a></h3>
-                        <p>Kicking off 2025 with exciting announcements and alumni spotlights.</p>
+                    <!-- Newsletter item 4 -->
+                    <div class="shadcn-card p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-start">
+                            <div class="sm:w-32 flex-shrink-0 mb-4 sm:mb-0">
+                                <div class="text-sm font-medium text-gray-500">January 2025</div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                                    <a href="#" class="hover:text-blue-600">New Year, New Opportunities</a>
+                                </h3>
+                                <p class="text-gray-600 mb-4">Kicking off 2025 with exciting announcements and alumni spotlights.</p>
+                                <div class="flex items-center">
+                                    <a href="#" class="shadcn-button shadcn-button-primary">Read Newsletter</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="newsletter-item">
-                        <div class="date">December 2024</div>
-                        <h3><a href="#">Year in Review</a></h3>
-                        <p>Celebrating our community's achievements throughout 2024.</p>
+                    <!-- Newsletter item 5 -->
+                    <div class="shadcn-card p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-start">
+                            <div class="sm:w-32 flex-shrink-0 mb-4 sm:mb-0">
+                                <div class="text-sm font-medium text-gray-500">December 2024</div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                                    <a href="#" class="hover:text-blue-600">Year in Review</a>
+                                </h3>
+                                <p class="text-gray-600 mb-4">Celebrating our community's achievements throughout 2024.</p>
+                                <div class="flex items-center">
+                                    <a href="#" class="shadcn-button shadcn-button-primary">Read Newsletter</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center mt-8">
+                    <nav class="flex items-center space-x-1">
+                        <a href="#" class="shadcn-button shadcn-button-outline">Previous</a>
+                        <a href="#" class="shadcn-button shadcn-button-outline">1</a>
+                        <a href="#" class="shadcn-button shadcn-button-outline bg-blue-50 text-blue-600 border-blue-200">2</a>
+                        <a href="#" class="shadcn-button shadcn-button-outline">3</a>
+                        <a href="#" class="shadcn-button shadcn-button-outline">Next</a>
+                    </nav>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <p>&copy; 2025 Almashines Alumni Portal. All rights reserved.</p>
+        <!-- Footer -->
+        <footer class="mt-16 pt-8 border-t border-gray-200">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-sm text-gray-500">&copy; 2025 Almashines Alumni Portal. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gray-500">LinkedIn</a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">Twitter</a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">Instagram</a>
+                </div>
+            </div>
         </footer>
     </div>
 </body>
